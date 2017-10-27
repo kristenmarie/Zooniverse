@@ -4,7 +4,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-  <div class="page-header">
+  <div class="jumbotron">
     <h1>The Zooniverse</h1>
   </div>
   <div class="container">
@@ -28,6 +28,7 @@ export class AppComponent {
 
   logNewAnimal = false;
   selectedAnimal = null;
+
 
   logButtonClicked() {
     this.logNewAnimal = true;

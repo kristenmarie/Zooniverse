@@ -16,6 +16,7 @@ h3 {
 body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  background-image: url('../images/bg.jpeg');
 }
 
 select {
@@ -26,8 +27,13 @@ button {
   font-family: 'Bangers', cursive;
 }
 
-.page-header {
+.container {
+  float: left;
+}
 
+.jumbotron {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .species {
