@@ -8,6 +8,9 @@ import { Animal } from './animal.model';
     <h1>The Zooniverse</h1>
   </div>
   <div class="container">
+    <div id="total">
+      <h4>Total Needed Caretakers: {{totalCaretakersNeeded}}</h4>
+    </div>
     <div *ngIf='!logNewAnimal'>
       <button class="btn" id="log" (click)="logButtonClicked()">Log New Animal</button>
       <animal-list [childAnimalList]="masterAnimalList" (editButtonClickSender)="editAnimal($event)"></animal-list>
@@ -28,6 +31,7 @@ export class AppComponent {
 
   logNewAnimal = false;
   selectedAnimal = null;
+  totalCaretakersNeeded: number = this.totalCaretakers();
 
 
   logButtonClicked() {
@@ -48,5 +52,13 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedAnimal = null;
+  }
+
+  totalCaretakers() {
+    let count = 0;
+    for(let i = 0; i < this.masterAnimalList.length; i ++) {
+      count += this.masterAnimalList[i].caretakersNeeded;
+    }
+    return count;
   }
 }

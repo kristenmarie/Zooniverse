@@ -31,7 +31,7 @@ This simple web application allows users to keep track of animals at a zoo! The 
 ## Setup/Installation Requirements
 
 * Clone this repository
-* In terminal, navigate to this projects root directory (tap-room)
+* In terminal, navigate to this projects root directory (zooniverse)
 * Ensure you have [Node.js](https://nodejs.org/en/), [Gulp](https://gulpjs.com), and [TypeScript](https://www.typescriptlang.org) installed
 * In terminal (while still in root directory), enter the following commands:
   * ``` $ npm install ```
