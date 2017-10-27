@@ -8,17 +8,13 @@ import { Animal } from './animal.model';
     <h1>The Zooniverse</h1>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div *ngIf='!logNewAnimal'>
-          <button class="btn" id="log" (click)="logButtonClicked()">Log New Animal</button>
-          <animal-list [childAnimalList]="masterAnimalList" (editButtonClickSender)="editAnimal($event)"></animal-list>
-          <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-        </div>
-        <div *ngIf='logNewAnimal'>
-          <new-animal (newAnimalSender)="logAnimal($event)" (logButtonClickedSender)="finishedLogging()"></new-animal>
-        </div>
-      </div>
+    <div *ngIf='!logNewAnimal'>
+      <button class="btn" id="log" (click)="logButtonClicked()">Log New Animal</button>
+      <animal-list [childAnimalList]="masterAnimalList" (editButtonClickSender)="editAnimal($event)"></animal-list>
+      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+    </div>
+    <div *ngIf='logNewAnimal'>
+      <new-animal (newAnimalSender)="logAnimal($event)" (logButtonClickedSender)="finishedLogging()"></new-animal>
     </div>
   </div>
   `

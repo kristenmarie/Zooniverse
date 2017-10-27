@@ -13,26 +13,26 @@ import { Animal } from './animal.model';
     <thead>
       <th class="species">Species</th>
       <th class="name">Name</th>
-      <th>Age</th>
-      <th>Diet</th>
-      <th>Location</th>
-      <th>Caretakers Needed</th>
-      <th>Sex</th>
-      <th>Likes</th>
-      <th>Dislikes</th>
+      <th class="age">Age</th>
+      <th class="diet">Diet</th>
+      <th class="location">Location</th>
+      <th class="caretakers">Caretakers Needed</th>
+      <th class="sex">Sex</th>
+      <th class="likes">Likes</th>
+      <th class="dislikes">Dislikes</th>
       <th>Edit</th>
     </thead>
     <tbody>
       <tr *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
         <td class="species">{{currentAnimal.species}}</td>
         <td class="name">{{currentAnimal.name}}</td>
-        <td>{{currentAnimal.age}}</td>
-        <td>{{currentAnimal.diet}}</td>
-        <td>{{currentAnimal.zooLocation}}</td>
-        <td>{{currentAnimal.caretakersNeeded}}</td>
-        <td>{{currentAnimal.sex}}</td>
-        <td>{{currentAnimal.like}}</td>
-        <td>{{currentAnimal.dislike}}</td>
+        <td class="age">{{currentAnimal.age}}</td>
+        <td class="diet">{{currentAnimal.diet}}</td>
+        <td class="location">{{currentAnimal.zooLocation}}</td>
+        <td class="caretakers">{{currentAnimal.caretakersNeeded}}</td>
+        <td class="sex">{{currentAnimal.sex}}</td>
+        <td class="likes">{{currentAnimal.like}}</td>
+        <td class="dislikes">{{currentAnimal.dislike}}</td>
         <td><button class="btn" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></td>
       </tr>
     </tbody>

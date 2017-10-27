@@ -7,10 +7,51 @@ h3 {
   font-size: 25px;
 }
 
-#log {
-  float: right;
+body {
+  text-align: center;
 }
 
+
 .page-header {
-  
+
+}
+
+.species {
+  color: #f9a825;
+}
+
+.name {
+  color: #2196f3;
+}
+
+.age {
+  color: #e91e63;
+}
+
+.diet {
+  color: #f44336;
+}
+
+.location {
+  color: #ab47bc;
+}
+
+.caretakers {
+  color: #26a69a;
+}
+
+.sex {
+  color: #f57c00;
+}
+
+.likes {
+  color: #388e3c;
+}
+
+.dislikes {
+  color: #dd2c00;
+}
+
+#log {
+  float: right;
 }
