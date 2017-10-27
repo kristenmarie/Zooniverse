@@ -15,6 +15,7 @@ import { Animal } from './animal.model';
       <p>Sex: {{currentAnimal.sex}}</p>
       <p>Likes: {{currentAnimal.like}}</p>
       <p>Dislikes: {{currentAnimal.dislike}}</p>
+      <button class="btn" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
     </li>
   </ul>
   `
@@ -22,5 +23,10 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+  @Output() editButtonClickSender = new EventEmitter();
+
+  editButtonHasBeenClicked(animalToEdit: Animal) {
+    this.editButtonClickSender.emit(animalToEdit);
+  }
 
 }

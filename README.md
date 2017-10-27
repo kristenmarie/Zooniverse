@@ -2,7 +2,7 @@
 
 #### An application for tracking animals at a zoo, 10.27.2017
 
-![image](https://user-images.githubusercontent.com/15882954/32069706-cd855084-ba3e-11e7-9049-29254f9bf301.jpg)
+![image]()
 
 #### By Kristen Marie Kulha
 

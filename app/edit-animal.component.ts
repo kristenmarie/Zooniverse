@@ -7,7 +7,7 @@ import { Animal } from './animal.model';
   <div *ngIf="childSelectedAnimal">
    <h2>Edit {{childSelectedAnimal.name}} the {{childSelectedAnimal.species}}</h2>
    <label>Age:</label>
-   <input [(ngMogel)]="childSelectedAnimal.age" class="form-control">
+   <input [(ngModel)]="childSelectedAnimal.age" class="form-control">
    <label>Number of Caretakers Needed:</label>
    <input [(ngModel)]="childSelectedAnimal.caretakersNeeded" class="form-control">
    <label>Like:</label>
@@ -15,6 +15,7 @@ import { Animal } from './animal.model';
    <label>Dislike:</label>
    <input [(ngModel)]="childSelectedAnimal.dislike" class="form-control">
    <button class="btn" (click)="doneButtonClicked()">Done</button>
+  </div>
   `
 })
 

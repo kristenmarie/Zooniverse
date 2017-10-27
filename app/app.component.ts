@@ -13,7 +13,8 @@ import { Animal } from './animal.model';
       <div class="col">
         <div *ngIf='!logNewAnimal'>
           <button class="btn" (click)="logButtonClicked()">Log New Animal</button>
-          <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+          <animal-list [childAnimalList]="masterAnimalList" (editButtonClickSender)="editAnimal($event)"></animal-list>
+          <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
         </div>
         <div *ngIf='logNewAnimal'>
           <new-animal (newAnimalSender)="logAnimal($event)" (logButtonClickedSender)="finishedLogging()"></new-animal>
@@ -31,6 +32,7 @@ export class AppComponent {
   ];
 
   logNewAnimal = false;
+  selectedAnimal = null;
 
   logButtonClicked() {
     this.logNewAnimal = true;
@@ -42,5 +44,13 @@ export class AppComponent {
 
   finishedLogging() {
     this.logNewAnimal = false;
+  }
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
   }
 }
