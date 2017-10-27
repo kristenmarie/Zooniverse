@@ -11,6 +11,7 @@ import { Animal } from './animal.model';
     <div class="row">
       <div class="col">
         <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+        <new-animal></new-animal>
       </div>
     </div>
   </div>
