@@ -27,13 +27,20 @@ button {
   font-family: 'Bangers', cursive;
 }
 
+.btn {
+  background-color: #4b6b4b
+}
+
 .container {
   float: left;
+  margin-left: 20px;
 }
 
 .jumbotron {
   padding-bottom: 10px;
   padding-top: 10px;
+  background-color: #475a4d;
+  color: white;
 }
 
 .species {
