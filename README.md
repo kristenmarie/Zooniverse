@@ -45,7 +45,11 @@ Total needed caretakers doesn't update when new animal is logged.
 
 ## Future functionality
 
-
+* Group animals by species.
+* Calculate and display average age by species.
+* Show animals based on diet type (carnivore, herbivore, omnivore).
+* Include image section on form so each animal entry has a photo of them with their stats.
+* Give each animal their individual profile page that can be navigated to from list of animals.
 
 ## 📧Support and contact details📧
 

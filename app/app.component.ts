@@ -57,7 +57,7 @@ export class AppComponent {
   }
 
   totalCaretakers() {
-    let count:number = 0;
+    let count: number = 0;
     for(let i = 0; i < this.masterAnimalList.length; i ++) {
       count += this.masterAnimalList[i].caretakersNeeded;
     }
