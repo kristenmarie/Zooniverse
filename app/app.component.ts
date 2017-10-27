@@ -4,15 +4,14 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
+  <div class="page-header">
+    <h1>The Zooniverse</h1>
+  </div>
   <div class="container">
-    <div class="page-header">
-      <h1>The Zooniverse</h1>
-    </div>
-
     <div class="row">
       <div class="col">
         <div *ngIf='!logNewAnimal'>
-          <button class="btn" (click)="logButtonClicked()">Log New Animal</button>
+          <button class="btn" id="log" (click)="logButtonClicked()">Log New Animal</button>
           <animal-list [childAnimalList]="masterAnimalList" (editButtonClickSender)="editAnimal($event)"></animal-list>
           <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
         </div>

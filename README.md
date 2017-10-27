@@ -32,7 +32,7 @@ This simple web application allows users to keep track of animals at a zoo! The 
 
 * Clone this repository
 * In terminal, navigate to this projects root directory (tap-room)
-* Ensure you have [Node.js](https://nodejs.org/en/) and [Gulp](https://gulpjs.com) installed
+* Ensure you have [Node.js](https://nodejs.org/en/), [Gulp](https://gulpjs.com), and [TypeScript](https://www.typescriptlang.org) installed
 * In terminal (while still in root directory), enter the following commands:
   * ``` $ npm install ```
   * ``` $ bower install ```
