@@ -41,10 +41,21 @@ import { Animal } from './animal.model';
     <label>Dislike:</label>
     <input #dislike class="form-control">
   </div>
+  <button class="btn" (click)="submitForm(species.value, name.value, age.value, diet.value, location.value, caretakersNeeded.value, sex.value, like.value, dislike.value); species.value=''; name.value=''; diet.value=''; location.value=''; caretakersNeeded.value=''; sex.value=''; like.value=''; dislike.value=''; logButtonClicked();">Log Animal</button>
 
   `
 })
 
 export class NewAnimalComponent {
+  @Output() newAnimalSender = new EventEmitter();
+  @Output() logButtonClickedSender = new EventEmitter();
 
+  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakersNeeded: number, sex: string, like: string, dislike: string) {
+    var newAnimalToLog: Animal = new Animal(species, name, age, diet, location, caretakersNeeded, sex, like, dislike);
+    this.newAnimalSender.emit(newAnimalToLog);
+  }
+
+  logButtonClicked() {
+    this.logButtonClickedSender.emit();
+  }
 }

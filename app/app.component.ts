@@ -8,10 +8,16 @@ import { Animal } from './animal.model';
     <div class="page-header">
       <h1>The Zooniverse</h1>
     </div>
+
     <div class="row">
       <div class="col">
-        <animal-list [childAnimalList]="masterAnimalList"></animal-list>
-        <new-animal></new-animal>
+        <div *ngIf='!logNewAnimal'>
+          <button class="btn" (click)="logButtonClicked()">Log New Animal</button>
+          <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+        </div>
+        <div *ngIf='logNewAnimal'>
+          <new-animal (newAnimalSender)="logAnimal($event)" (logButtonClickedSender)="finishedLogging()"></new-animal>
+        </div>
       </div>
     </div>
   </div>
@@ -23,4 +29,18 @@ export class AppComponent {
     new Animal('Gorilla', 'Bollo', 24, 'Fruit', 'Montane Forest', 3, 'Male', 'Roller Disco', 'Jazz'),
     new Animal('Snow Leopard', 'Vincent', 1, 'Meat', 'Mountain Tops', 2, 'Female', 'Quiet Mornings', 'Dogs')
   ];
+
+  logNewAnimal = false;
+
+  logButtonClicked() {
+    this.logNewAnimal = true;
+  }
+
+  logAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
+  }
+
+  finishedLogging() {
+    this.logNewAnimal = false;
+  }
 }
