@@ -2,7 +2,7 @@
 
 #### An application for tracking animals at a zoo, 10.27.2017
 
-![image]()
+![image](https://user-images.githubusercontent.com/15882954/32127590-af60d5a8-bb2c-11e7-890c-0793d00ab0f7.png)
 
 #### By Kristen Marie Kulha
 
@@ -41,7 +41,7 @@ This simple web application allows users to keep track of animals at a zoo! The 
 
 ## 🐛Known Bugs🐛
 
-There are no known bugs at this time.
+Total needed caretakers doesn't update when new animal is logged.
 
 ## Future functionality
 
