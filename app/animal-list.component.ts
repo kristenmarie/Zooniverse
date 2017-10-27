@@ -21,6 +21,7 @@ import { Animal } from './animal.model';
         <th class="sex">Sex</th>
         <th class="likes">Likes</th>
         <th class="dislikes">Dislikes</th>
+        <th class="dateLogged">Logged</th>
         <th>Edit</th>
       </thead>
       <tbody>
@@ -34,6 +35,7 @@ import { Animal } from './animal.model';
           <td class="sex">{{currentAnimal.sex}}</td>
           <td class="likes">{{currentAnimal.like}}</td>
           <td class="dislikes">{{currentAnimal.dislike}}</td>
+          <td class="dateLogged">{{currentAnimal.dateLogged}}</td>
           <td><button class="btn" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></td>
         </tr>
       </tbody>

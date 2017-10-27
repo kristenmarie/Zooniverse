@@ -86,3 +86,15 @@ button {
 #log {
   margin-bottom: 2rem;
 }
+
+#total {
+  background-color: rgba(255,255,255,0.75);
+  max-width: 150px;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  border-radius: 3px;
+  font-family: 'Bangers', cursive;
+  font-size: 16px;
+  float: right;
+  margin-right: 10px;
+}
