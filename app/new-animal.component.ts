@@ -62,8 +62,8 @@ export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
   @Output() logButtonClickedSender = new EventEmitter();
 
-  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakersNeeded: number, sex: string, like: string, dislike: string, date: string) {
-    var newAnimalToLog: Animal = new Animal(species, name, age, diet, location, caretakersNeeded, sex, like, dislike, date);
+  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakersNeeded: string, sex: string, like: string, dislike: string, date: string) {
+    var newAnimalToLog: Animal = new Animal(species, name, age, diet, location, parseInt(caretakersNeeded), sex, like, dislike, date);
     this.newAnimalSender.emit(newAnimalToLog);
   }
 

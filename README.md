@@ -41,7 +41,7 @@ This simple web application allows users to keep track of animals at a zoo! The 
 
 ## 🐛Known Bugs🐛
 
-Total needed caretakers doesn't update when new animal is logged.
+There are no known bugs at this time.
 
 ## Future functionality
 
